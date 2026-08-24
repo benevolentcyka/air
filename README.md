@@ -36,19 +36,41 @@ written by the sender, which is why this needs no database and no server.
 
 | Chain | Source | Message carried in |
 |---|---|---|
-| Ethereum | eth.blockscout.com | transaction `input` data |
+| Ethereum | Etherscan V2 via `/api/evm`, falls back to eth.blockscout.com | transaction `input` data |
 | Base | base.blockscout.com | transaction `input` data |
-| Arbitrum | arbitrum.blockscout.com | transaction `input` data |
+| Arbitrum | Etherscan V2 via `/api/evm`, falls back to arbitrum.blockscout.com | transaction `input` data |
 | Bitcoin | blockstream.info, falls back to mempool.space | `OP_RETURN` output |
 | Solana | solana-rpc.publicnode.com | Memo program instruction |
 
 Prices come from CoinGecko, falling back to Coinbase, falling back to hardcoded
 approximations that are labelled as indicative when used.
 
-Optimism was in the original plan and is not here: no free Blockscout instance
-for it currently answers browser requests. To add a chain, append an entry to
-`EVM_CHAINS`. Anything Blockscout-hosted with native ETH works unchanged. A
-chain with a different native token also needs a price entry.
+## The Etherscan key
+
+`api/evm.js` is the only thing that ever sees the key. It reads
+`ETHERSCAN_API_KEY` from the environment, hardcodes the treasury address so the
+endpoint cannot be used as an open relay against your quota, and sets a 30
+second CDN cache so a viral hour cannot burn it either.
+
+Set it once:
+
+```bash
+vercel env add ETHERSCAN_API_KEY production
+```
+
+**Never put the key in `index.html`.** The page is static and this repo is
+public, so anything in the HTML is readable by everyone.
+
+If the key is missing or the proxy is absent, the page falls back to keyless
+public explorers on its own and keeps working. That is why it still runs from a
+plain `python -m http.server`.
+
+Etherscan's free tier covers **Ethereum and Arbitrum only**. Base and Optimism
+return "Free API access is not supported for this chain", so Base is read from
+Blockscout and Optimism is not listed at all: no free source of any kind covers
+it, and a chain that permanently reads "no answer" is worse than one that is
+absent. Upgrading the Etherscan plan would bring both in with no code change
+beyond adding an `id` to the chain entry.
 
 ## Before you promote it
 

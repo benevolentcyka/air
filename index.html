@@ -910,10 +910,12 @@ const ADDR = {
   btc: 'bc1qqtaknajcrkn0tw2asvtyc2zeeusu6fvjprrdr0',
   sol: '8oVrfDSLrrMpqYANvAwYekn2HCppA2HHS9j8mPfM8mgD'
 };
+/* id = Etherscan V2 chain id, read through /api/evm so the key stays server-side.
+   api = keyless public explorer, used when the proxy is absent (plain static hosting). */
 const EVM_CHAINS = [
-  { key:'ethereum', name:'Ethereum', api:'https://eth.blockscout.com',      ex:'https://etherscan.io/tx/' },
-  { key:'base',     name:'Base',     api:'https://base.blockscout.com',     ex:'https://basescan.org/tx/' },
-  { key:'arbitrum', name:'Arbitrum', api:'https://arbitrum.blockscout.com', ex:'https://arbiscan.io/tx/' }
+  { key:'ethereum', id:1,     name:'Ethereum', api:'https://eth.blockscout.com',      ex:'https://etherscan.io/tx/' },
+  { key:'base',                name:'Base',     api:'https://base.blockscout.com',     ex:'https://basescan.org/tx/' },
+  { key:'arbitrum', id:42161, name:'Arbitrum', api:'https://arbitrum.blockscout.com', ex:'https://arbiscan.io/tx/' }
 ];
 const SOL_RPC = ['https://solana-rpc.publicnode.com','https://api.mainnet-beta.solana.com'];
 const FALLBACK_PRICE = { ETH:2500, BTC:78000, SOL:95 };
@@ -1001,11 +1003,28 @@ async function prices(){
 
 /* ---- EVM ---- */
 async function readEvm(chain){
-  const url = `${chain.api}/api?module=account&action=txlist&address=${ADDR.evm}&sort=desc&page=1&offset=60`;
-  const d = await getJSON(url);
-  if(d.status !== '1' || !Array.isArray(d.result)) return [];
+  let rows = null;
+
+  // 1. the proxy, when this is hosted somewhere that has the key
+  if(chain.id){
+    try{
+      const d = await getJSON(`/api/evm?chainid=${chain.id}`);
+      if(d.status === '1' && Array.isArray(d.result)) rows = d.result;
+      else if(d.status === '0' && /no transactions/i.test(d.message || '')) rows = [];
+    }catch{ /* fall through to the keyless explorer */ }
+  }
+
+  // 2. keyless public explorer, so the page still works as a plain static file
+  if(rows === null && chain.api){
+    const d = await getJSON(`${chain.api}/api?module=account&action=txlist&address=${ADDR.evm}&sort=desc&page=1&offset=60`);
+    if(d.status === '1' && Array.isArray(d.result)) rows = d.result;
+    else if(d.status === '0') rows = [];
+  }
+
+  if(rows === null) throw new Error('no source answered');
+
   const me = ADDR.evm.toLowerCase();
-  return d.result
+  return rows
     .filter(t => (t.to||'').toLowerCase() === me
               && t.isError !== '1' && t.txreceipt_status !== '0'
               && BigInt(t.value || '0') > 0n)
