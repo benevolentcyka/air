@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIR, the shop that sells nothing</title>
+<meta name="description" content="A shop that sells nothing. Pay what you like, inscribe a message into the transaction, and take your place on the Ledger of Nothing.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22s%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2302040A%22%2F%3E%3Cstop%20offset%3D%22.34%22%20stop-color%3D%22%230A1D47%22%2F%3E%3Cstop%20offset%3D%22.62%22%20stop-color%3D%22%23123C7C%22%2F%3E%3Cstop%20offset%3D%22.80%22%20stop-color%3D%22%238E3A22%22%2F%3E%3Cstop%20offset%3D%22.865%22%20stop-color%3D%22%23D8531F%22%2F%3E%3Cstop%20offset%3D%22.885%22%20stop-color%3D%22%2325100E%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080510%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22g%22%20cx%3D%22.5%22%20cy%3D%22.5%22%20r%3D%22.5%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23FF7A3C%22%20stop-opacity%3D%22.75%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23E4441C%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2213%22%20fill%3D%22url(%23s)%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2238%22%20r%3D%2222%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23F4592C%22%2F%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22s%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2302040A%22%2F%3E%3Cstop%20offset%3D%22.34%22%20stop-color%3D%22%230A1D47%22%2F%3E%3Cstop%20offset%3D%22.62%22%20stop-color%3D%22%23123C7C%22%2F%3E%3Cstop%20offset%3D%22.80%22%20stop-color%3D%22%238E3A22%22%2F%3E%3Cstop%20offset%3D%22.865%22%20stop-color%3D%22%23D8531F%22%2F%3E%3Cstop%20offset%3D%22.885%22%20stop-color%3D%22%2325100E%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23080510%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22g%22%20cx%3D%22.5%22%20cy%3D%22.5%22%20r%3D%22.5%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23FF7A3C%22%20stop-opacity%3D%22.75%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23E4441C%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2213%22%20fill%3D%22url(%23s)%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2238%22%20r%3D%2222%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2238%22%20r%3D%229%22%20fill%3D%22%23F4592C%22%2F%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#03050C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AIR, the shop that sells nothing">
+<meta property="og:description" content="Pay whatever you think nothing is worth. Write one line into the transaction itself. Take your place on the Ledger of Nothing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIR, the shop that sells nothing">
+<meta name="twitter:description" content="You will receive nothing. Delivery is immediate, and has already begun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,200..300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AIR. Designed by Benevolent
+   Palette pulled from the reference paintings: stippled cobalt
+   night, ember sun, sodium interior lamplight, deep void.
+   ============================================================ */
+:root{
+  --void:#03050C;
+  --ink:#0A0A12;
+  --cobalt:#1B4FA8;
+  --cobalt-deep:#0B2454;
+  --ember:#E4441C;
+  --ember-soft:#FF6B3D;
+  --sodium:#F0A070;
+  --cream:#EBDCC6;
+  --frond:#3E8F52;
+  --text:#E8DFD2;
+  --text-soft:#A79C8E;
+  --text-faint:#6E675E;
+  --hair:rgba(235,220,198,.14);
+  --hair-soft:rgba(235,220,198,.07);
+  --glass:rgba(8,14,30,.44);
+  --glass-solid:rgba(6,10,22,.78);
+
+  --f-display:'Italiana', 'Didot', Georgia, serif;
+  --f-poem:'Newsreader', Georgia, 'Times New Roman', serif;
+  --f-ui:'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --f-mono:'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --inset:2.4vmin;
+  --gut:clamp(20px, 5vw, 78px);
+}
+*{box-sizing:border-box; margin:0; padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--void);
+  color:var(--text);
+  font-family:var(--f-ui);
+  font-weight:300;
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--ember); color:#fff}
+a{color:inherit}
+
+/* ---------- the view ---------- */
+#sky{position:fixed; inset:0; width:100%; height:100%; z-index:0; display:block}
+
+#grain{
+  position:fixed; inset:0; z-index:2; pointer-events:none;
+  opacity:.34; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* the room you are standing in: dark surround + a lit window edge */
+#room{position:fixed; inset:0; z-index:3; pointer-events:none}
+#room .pane{
+  position:absolute; inset:var(--inset);
+  border:1px solid rgba(240,160,112,.30);
+  border-radius:2px;
+  box-shadow:
+    0 0 0 1px rgba(3,5,12,.9),
+    0 0 26px 2px rgba(240,160,112,.10) inset,
+    0 0 0 100vmax var(--void);
+}
+#room .mullion{
+  position:absolute; top:var(--inset); bottom:var(--inset); width:1px;
+  background:linear-gradient(to bottom, rgba(240,160,112,0), rgba(240,160,112,.34) 12%, rgba(240,160,112,.34) 88%, rgba(240,160,112,0));
+  box-shadow:0 0 12px rgba(240,160,112,.22);
+  opacity:1; transition:opacity .5s ease;
+}
+#room .m1{left:33.333%} #room .m2{left:66.666%}
+#room.past .mullion{opacity:0}
+/* the vignette of a dim room */
+#room .vig{
+  position:absolute; inset:0;
+  background:radial-gradient(130% 95% at 50% 42%, transparent 40%, rgba(3,5,12,.55) 78%, rgba(3,5,12,.88) 100%);
+}
+
+/* ---------- shell ---------- */
+main{position:relative; z-index:4}
+.sec{padding:0 calc(var(--gut) + var(--inset))}
+.wrap{max-width:1180px; margin:0 auto; width:100%}
+
+/* eyebrow / small caps label */
+.eyebrow{
+  font-family:var(--f-ui); font-weight:400;
+  font-size:clamp(9px,1.05vw,11px); letter-spacing:.42em; text-transform:uppercase;
+  color:var(--sodium); opacity:.82;
+}
+.rule{height:1px; background:var(--hair); border:0}
+
+/* ---------- masthead ---------- */
+#mast{
+  position:fixed; z-index:6; left:var(--inset); right:var(--inset); top:var(--inset);
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:14px clamp(14px,3vw,30px);
+  font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+  background:linear-gradient(to bottom, rgba(3,5,12,.72), rgba(3,5,12,0));
+  transition:opacity .4s ease;
+}
+#mast .mark{font-family:var(--f-display); font-size:17px; letter-spacing:.5em; color:var(--cream)}
+#mast nav{display:flex; gap:clamp(12px,2.4vw,30px)}
+#mast a{
+  color:var(--text-soft); text-decoration:none; font-size:10px; letter-spacing:.28em;
+  padding-bottom:3px; border-bottom:1px solid transparent; transition:color .25s, border-color .25s;
+}
+#mast a:hover, #mast a:focus-visible{color:var(--sodium); border-bottom-color:rgba(240,160,112,.5)}
+
+/* ---------- hero ---------- */
+#view{
+  min-height:100svh; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center;
+  padding-top:12vh; padding-bottom:9vh;
+}
+#view .open{margin-bottom:clamp(22px,4vh,44px)}
+.wordmark{
+  font-family:var(--f-display); font-weight:400;
+  font-size:clamp(72px, 21vw, 300px);
+  line-height:.86; letter-spacing:.14em; text-indent:.14em;
+  color:var(--cream);
+  text-shadow:0 0 60px rgba(240,160,112,.28), 0 0 140px rgba(27,79,168,.4);
+}
+.tagline{
+  font-family:var(--f-poem); font-style:italic; font-weight:200;
+  font-size:clamp(19px,2.9vw,34px); line-height:1.42;
+  color:var(--text); max-width:19ch; margin:clamp(18px,3.4vh,34px) auto 0;
+  text-wrap:balance;
+}
+.tagline em{font-style:italic; color:var(--sodium)}
+.plainly{
+  margin:clamp(20px,3.6vh,36px) auto 0; max-width:46ch;
+  font-size:clamp(12px,1.35vw,14px); line-height:1.85; color:var(--text-soft);
+}
+.scrollcue{
+  margin-top:clamp(26px,5vh,54px);
+  font-size:10px; letter-spacing:.34em; text-transform:uppercase; color:var(--text-faint);
+  display:flex; align-items:center; gap:11px; justify-content:center;
+}
+.scrollcue i{display:block; width:1px; height:34px; background:linear-gradient(var(--sodium), transparent); animation:drop 3.4s ease-in-out infinite}
+@keyframes drop{0%,100%{opacity:.25; transform:scaleY(.6)} 50%{opacity:1; transform:scaleY(1)}}
+
+/* ---------- section heads ---------- */
+.head{display:flex; align-items:baseline; gap:clamp(14px,3vw,34px); flex-wrap:wrap; margin-bottom:clamp(26px,4vh,52px)}
+.head h2{
+  font-family:var(--f-display); font-weight:400;
+  font-size:clamp(30px,5.4vw,62px); line-height:1; letter-spacing:.1em;
+  color:var(--cream);
+}
+.head p{font-size:clamp(12px,1.4vw,14.5px); color:var(--text-soft); max-width:38ch}
+
+.band{padding-top:clamp(74px,13vh,150px); padding-bottom:clamp(74px,13vh,150px)}
+
+/* ---------- catalogue ---------- */
+.entry{
+  display:grid; gap:6px 26px; padding:clamp(20px,2.7vh,30px) 0;
+  border-top:1px solid var(--hair-soft);
+  grid-template-columns:120px minmax(0,1fr) 190px;
+  transition:background .35s ease;
+}
+.entry:last-of-type{border-bottom:1px solid var(--hair-soft)}
+.entry:hover{background:linear-gradient(to right, rgba(240,160,112,.055), rgba(240,160,112,0) 70%)}
+.entry .sku{font-family:var(--f-mono); font-size:11px; letter-spacing:.14em; color:var(--ember-soft); padding-top:.5em}
+.entry .body{min-width:0}
+.entry h3{
+  font-family:var(--f-poem); font-style:italic; font-weight:300;
+  font-size:clamp(20px,2.5vw,29px); line-height:1.28; color:var(--text); margin-bottom:9px;
+}
+.entry dl{display:flex; flex-wrap:wrap; gap:4px 20px; font-size:12.5px; color:var(--text-soft)}
+.entry dt{color:var(--text-faint); letter-spacing:.2em; text-transform:uppercase; font-size:9.5px; padding-top:.35em}
+.entry dd{margin-right:8px}
+.entry .price{
+  font-family:var(--f-mono); font-size:12px; letter-spacing:.06em; color:var(--sodium);
+  text-align:right; padding-top:.7em; white-space:nowrap;
+}
+
+/* ---------- breathing room ---------- */
+#breathe .inner{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(30px,6vw,80px); align-items:center}
+.orbwrap{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px; min-height:340px}
+.orb{
+  width:clamp(150px,20vw,230px); aspect-ratio:1; border-radius:50%;
+  background:radial-gradient(circle at 50% 45%, rgba(255,107,61,.9), rgba(228,68,28,.5) 44%, rgba(27,79,168,.18) 72%, transparent 76%);
+  box-shadow:0 0 70px rgba(228,68,28,.4), 0 0 160px rgba(240,160,112,.16);
+  animation:breathe 11s cubic-bezier(.44,0,.55,1) infinite;
+}
+@keyframes breathe{
+  0%,100%{transform:scale(.72); opacity:.62}
+  40%{transform:scale(1); opacity:1}
+  55%{transform:scale(1); opacity:1}
+}
+.breathlabel{font-size:10.5px; letter-spacing:.42em; text-transform:uppercase; color:var(--sodium); height:1.4em}
+#breathe .say p{font-family:var(--f-poem); font-style:italic; font-weight:200; font-size:clamp(19px,2.5vw,30px); line-height:1.5; color:var(--text); margin-bottom:22px; text-wrap:pretty}
+#breathe .say .plainly{margin-left:0; margin-top:0}
+.tally{
+  margin-top:26px; font-family:var(--f-mono); font-size:12px; color:var(--text-faint);
+  border-left:1px solid rgba(240,160,112,.4); padding-left:14px;
+}
+.tally b{color:var(--sodium); font-weight:400}
+
+/* ---------- buying ---------- */
+.steps{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(18px,2.6vw,34px); margin-bottom:clamp(34px,6vh,64px)}
+.step{border-top:1px solid rgba(240,160,112,.34); padding-top:16px}
+.step .n{font-family:var(--f-mono); font-size:11px; color:var(--ember-soft); letter-spacing:.2em; display:block; margin-bottom:8px}
+.step h3{font-family:var(--f-poem); font-style:italic; font-weight:300; font-size:clamp(17px,2vw,22px); color:var(--text); margin-bottom:7px}
+.step p{font-size:12.5px; color:var(--text-soft); line-height:1.7}
+
+/* composer */
+.composer{
+  background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--hair); border-radius:3px;
+  padding:clamp(20px,3.2vw,36px);
+}
+.composer .lab{display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin-bottom:12px}
+.composer textarea{
+  width:100%; min-height:96px; resize:vertical;
+  background:rgba(3,5,12,.55); color:var(--text);
+  border:1px solid var(--hair); border-radius:2px;
+  padding:14px 16px;
+  font-family:var(--f-poem); font-style:italic; font-weight:300; font-size:17px; line-height:1.55;
+}
+.composer textarea::placeholder{color:var(--text-faint); font-style:italic}
+.composer textarea:focus{outline:none; border-color:rgba(240,160,112,.6); box-shadow:0 0 0 3px rgba(240,160,112,.1)}
+.counts{display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; font-family:var(--f-mono); font-size:10.5px; color:var(--text-faint); letter-spacing:.05em}
+.counts .over{color:var(--ember-soft)}
+
+.outs{display:grid; gap:12px; margin-top:22px}
+.out{border:1px solid var(--hair-soft); border-radius:2px; padding:13px 15px; background:rgba(3,5,12,.4)}
+.out .oh{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px}
+.out .chain{font-size:9.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--sodium)}
+.out .hint{font-size:11px; color:var(--text-faint); line-height:1.5}
+.out code{
+  display:block; font-family:var(--f-mono); font-size:11.5px; line-height:1.6;
+  color:var(--text); word-break:break-all; max-height:5.2em; overflow:auto;
+  background:rgba(0,0,0,.32); padding:9px 11px; border-radius:2px; margin-bottom:8px;
+}
+
+/* buttons */
+.btn{
+  font-family:var(--f-ui); font-size:9.5px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--sodium); background:transparent;
+  border:1px solid rgba(240,160,112,.38); border-radius:2px;
+  padding:7px 13px; cursor:pointer; white-space:nowrap;
+  transition:background .25s, color .25s, border-color .25s;
+}
+.btn:hover{background:rgba(240,160,112,.13); color:var(--cream)}
+.btn.done{background:rgba(62,143,82,.2); border-color:rgba(62,143,82,.6); color:#9FD9AE}
+:focus-visible{outline:2px solid var(--sodium); outline-offset:3px}
+
+/* address plates */
+.plates{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(14px,2vw,22px); margin-top:clamp(26px,4vh,44px)}
+.plate{
+  background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--hair); border-radius:3px; padding:20px;
+  display:flex; flex-direction:column; gap:11px;
+  transition:border-color .3s, transform .3s;
+}
+.plate:hover{border-color:rgba(240,160,112,.4); transform:translateY(-2px)}
+.plate .pn{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+.plate .net{font-family:var(--f-display); font-size:20px; letter-spacing:.16em; color:var(--cream)}
+.plate .on{font-size:9.5px; letter-spacing:.16em; color:var(--text-faint); text-align:right; line-height:1.5}
+.plate .addr{
+  font-family:var(--f-mono); font-size:11.5px; line-height:1.7; color:var(--text);
+  word-break:break-all; background:rgba(0,0,0,.34); border-radius:2px; padding:10px 11px;
+  border:1px solid var(--hair-soft);
+}
+.plate .btn{align-self:flex-start}
+
+.plainer{
+  margin-top:clamp(30px,5vh,52px); padding:22px clamp(18px,3vw,30px);
+  border:1px solid rgba(228,68,28,.28); border-radius:3px;
+  background:rgba(228,68,28,.05);
+  font-size:12.5px; line-height:1.85; color:var(--text-soft); max-width:76ch;
+}
+.plainer strong{color:var(--sodium); font-weight:400}
+
+/* ---------- the ledger (a CRT in the corner of the room) ---------- */
+.crt{
+  position:relative; overflow:hidden;
+  background:linear-gradient(180deg, rgba(4,8,20,.9), rgba(2,4,12,.94));
+  border:1px solid rgba(240,160,112,.24); border-radius:4px;
+  box-shadow:0 0 60px rgba(27,79,168,.18) inset, 0 20px 70px rgba(0,0,0,.5);
+}
+.crt::after{
+  content:''; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.28) 2px 3px);
+}
+.crt .bar{
+  display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  padding:12px clamp(14px,2.4vw,22px); border-bottom:1px solid rgba(240,160,112,.2);
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em; color:var(--text-faint);
+}
+.crt .bar .live{display:flex; align-items:center; gap:8px; color:var(--sodium)}
+.dot{width:6px; height:6px; border-radius:50%; background:var(--frond); box-shadow:0 0 8px var(--frond); animation:pulse 2.6s ease-in-out infinite}
+.dot.warn{background:var(--ember); box-shadow:0 0 8px var(--ember); animation:none}
+@keyframes pulse{0%,100%{opacity:.35} 50%{opacity:1}}
+
+/* champion */
+.champ{padding:clamp(24px,4vw,44px) clamp(16px,3vw,44px); border-bottom:1px solid rgba(240,160,112,.16); position:relative}
+.champ .cap{font-size:9.5px; letter-spacing:.4em; text-transform:uppercase; color:var(--ember-soft); margin-bottom:16px}
+.champ blockquote{
+  font-family:var(--f-poem); font-style:italic; font-weight:200;
+  font-size:clamp(22px,3.6vw,44px); line-height:1.36; color:var(--cream);
+  max-width:24ch; text-wrap:pretty; overflow-wrap:anywhere;
+}
+.champ .meta{margin-top:20px; display:flex; gap:clamp(16px,3vw,40px); flex-wrap:wrap; font-family:var(--f-mono); font-size:11.5px; color:var(--text-soft)}
+.champ .meta b{display:block; font-size:9px; letter-spacing:.24em; text-transform:uppercase; color:var(--text-faint); font-weight:400; margin-bottom:3px}
+.champ .amt{color:var(--sodium)}
+
+/* rows */
+.rows{max-height:none}
+.row{
+  display:grid; grid-template-columns:44px minmax(0,1fr) 150px 116px;
+  gap:8px 18px; align-items:baseline;
+  padding:15px clamp(16px,3vw,44px);
+  border-bottom:1px solid rgba(235,220,198,.055);
+  font-size:13px;
+}
+.row:last-child{border-bottom:0}
+.row:hover{background:rgba(240,160,112,.045)}
+.row .rk{font-family:var(--f-mono); font-size:12px; color:var(--text-faint)}
+.row .msg{font-family:var(--f-poem); font-style:italic; font-weight:300; font-size:16px; line-height:1.45; color:var(--text); overflow-wrap:anywhere}
+.row .msg.none{font-family:var(--f-ui); font-style:normal; font-size:12.5px; color:var(--text-faint); letter-spacing:.04em}
+.row .val{font-family:var(--f-mono); font-size:12.5px; color:var(--sodium); text-align:right}
+.row .val small{display:block; color:var(--text-faint); font-size:10.5px; letter-spacing:.04em}
+.row .whence{font-family:var(--f-mono); font-size:10.5px; color:var(--text-faint); text-align:right; line-height:1.5}
+.row .whence a{color:var(--text-faint); text-decoration:none; border-bottom:1px solid rgba(235,220,198,.18)}
+.row .whence a:hover{color:var(--sodium); border-bottom-color:var(--sodium)}
+.tag{display:inline-block; font-family:var(--f-ui); font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; padding:1px 6px; border:1px solid var(--hair); border-radius:2px; color:var(--text-faint); margin-left:8px; vertical-align:middle}
+
+.empty{padding:clamp(40px,8vh,90px) clamp(16px,3vw,44px); text-align:center}
+.empty p{font-family:var(--f-poem); font-style:italic; font-weight:200; font-size:clamp(19px,2.6vw,28px); color:var(--text-soft); margin-bottom:12px}
+.empty span{font-size:12px; color:var(--text-faint)}
+.chainpills{display:flex; gap:8px; flex-wrap:wrap; padding:12px clamp(16px,3vw,44px); border-top:1px solid rgba(235,220,198,.06); font-family:var(--f-mono); font-size:9.5px; letter-spacing:.1em}
+.pill{padding:3px 9px; border:1px solid var(--hair-soft); border-radius:2px; color:var(--text-faint)}
+.pill.ok{color:var(--frond); border-color:rgba(62,143,82,.35)}
+.pill.bad{color:var(--ember-soft); border-color:rgba(228,68,28,.35)}
+
+/* ---------- footer ---------- */
+footer{padding:clamp(60px,10vh,120px) calc(var(--gut) + var(--inset)) clamp(40px,7vh,70px); position:relative; z-index:4}
+.fgrid{display:flex; justify-content:space-between; align-items:flex-end; gap:30px; flex-wrap:wrap; border-top:1px solid var(--hair-soft); padding-top:30px}
+.sig{font-family:var(--f-display); font-size:clamp(18px,2.4vw,26px); letter-spacing:.2em; color:var(--cream)}
+.sig span{display:block; font-family:var(--f-ui); font-size:9px; letter-spacing:.36em; text-transform:uppercase; color:var(--text-faint); margin-bottom:9px}
+.fnote{font-size:11px; color:var(--text-faint); max-width:44ch; line-height:1.8}
+
+/* ---------- reveal ---------- */
+.rise{opacity:0; transform:translateY(22px); transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)}
+.rise.in{opacity:1; transform:none}
+
+/* ---------- narrow ---------- */
+@media (max-width:900px){
+  #room .mullion{display:none}
+  .entry{grid-template-columns:1fr; gap:4px}
+  .entry .price{text-align:left; padding-top:6px}
+  .entry .sku{padding-top:0}
+  #breathe .inner{grid-template-columns:1fr; gap:38px}
+  .orbwrap{min-height:auto; order:-1}
+  .steps{grid-template-columns:1fr; gap:20px}
+  .plates{grid-template-columns:1fr}
+  .row{grid-template-columns:30px minmax(0,1fr); }
+  .row .val{text-align:left; grid-column:2}
+  .row .whence{text-align:left; grid-column:2}
+  #mast nav{gap:14px}
+}
+@media (max-width:560px){
+  #mast .mark{font-size:14px}
+  #mast a{font-size:9px; letter-spacing:.18em}
+  .champ blockquote{max-width:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
+  .rise{opacity:1; transform:none}
+}
+</style>
+</head>
+<body>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<div id="room" aria-hidden="true">
+  <div class="vig"></div>
+  <div class="mullion m1"></div>
+  <div class="mullion m2"></div>
+  <div class="pane"></div>
+</div>
+
+<header id="mast">
+  <div class="mark">AIR</div>
+  <nav>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#buy">Buy nothing</a>
+    <a href="#ledger">The ledger</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ══════════ THE WINDOW ══════════ -->
+  <section id="view" class="sec">
+    <div class="wrap">
+      <p class="eyebrow open">Est. nowhere &nbsp;·&nbsp; open all night &nbsp;·&nbsp; no stock, no staff</p>
+      <h1 class="wordmark">AIR</h1>
+      <p class="tagline">We sell nothing. It is the finest thing we have, and there is <em>enough for everyone</em>.</p>
+      <p class="plainly">Pay whatever you think nothing is worth. Write a line into the transaction itself. The chain keeps it, and this window reads it back, largest first, forever.</p>
+      <p class="scrollcue"><i></i> The ledger is below <i></i></p>
+    </div>
+  </section>
+
+  <!-- ══════════ CATALOGUE ══════════ -->
+  <section id="catalogue" class="sec band">
+    <div class="wrap">
+      <div class="head rise">
+        <h2>The Catalogue</h2>
+        <p>Five things we do not have, described in full. Every one of them is already yours.</p>
+      </div>
+
+      <div class="rise">
+        <article class="entry">
+          <div class="sku">AIR-001</div>
+          <div class="body">
+            <h3>One litre of night air, unwrapped</h3>
+            <dl>
+              <dt>Notes</dt><dd>Cold stone · rain that hasn't arrived · someone's laundry, two floors down</dd>
+              <dt>Served</dt><dd>At an open window, after eleven</dd>
+            </dl>
+          </div>
+          <div class="price">whatever you decide</div>
+        </article>
+
+        <article class="entry">
+          <div class="sku">AIR-002</div>
+          <div class="body">
+            <h3>The smell of the garden coming through the glass</h3>
+            <dl>
+              <dt>Notes</dt><dd>Wet fern · geranium · a fountain running for nobody</dd>
+              <dt>Served</dt><dd>Continuously, since long before you got here</dd>
+            </dl>
+          </div>
+          <div class="price">whatever you decide</div>
+        </article>
+
+        <article class="entry">
+          <div class="sku">AIR-003</div>
+          <div class="body">
+            <h3>The pause between two breaths</h3>
+            <dl>
+              <dt>Notes</dt><dd>None. That is the entire point of it</dd>
+              <dt>Served</dt><dd>About twenty thousand times a day, unremarked</dd>
+            </dl>
+          </div>
+          <div class="price">whatever you decide</div>
+        </article>
+
+        <article class="entry">
+          <div class="sku">AIR-004</div>
+          <div class="body">
+            <h3>The hour before the sun comes up</h3>
+            <dl>
+              <dt>Notes</dt><dd>Ozone · a diesel engine far away · bread, somewhere</dd>
+              <dt>Served</dt><dd>Once nightly. Never the same one twice</dd>
+            </dl>
+          </div>
+          <div class="price">whatever you decide</div>
+        </article>
+
+        <article class="entry">
+          <div class="sku">AIR-005</div>
+          <div class="body">
+            <h3>The ability to keep doing all of this</h3>
+            <dl>
+              <dt>Notes</dt><dd>Unclassifiable</dd>
+              <dt>Served</dt><dd>Until it isn't</dd>
+            </dl>
+          </div>
+          <div class="price">whatever you decide</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ THE BREATHING ROOM ══════════ -->
+  <section id="breathe" class="sec band">
+    <div class="wrap">
+      <div class="inner">
+        <div class="orbwrap rise">
+          <div class="orb"></div>
+          <p class="breathlabel" id="breathLabel">breathe in</p>
+        </div>
+        <div class="say rise">
+          <p class="eyebrow" style="margin-bottom:18px">The product, in use</p>
+          <p>You are holding it right now. You have been holding it, without paying, every second since you arrived, and every second before that.</p>
+          <p class="plainly">Nobody invoiced you. Nobody will. The shop exists to point at the thing, not to supply it. If that seems worth something, the address is further down. If it doesn't, you have lost nothing, which is also what we sell.</p>
+          <p class="tally">Breaths taken since you opened this window: <b id="tally">0</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BUYING NOTHING ══════════ -->
+  <section id="buy" class="sec band">
+    <div class="wrap">
+      <div class="head rise">
+        <h2>How to buy nothing</h2>
+        <p>No wallet connection. No signatures. No app asking for permission. You send a transaction the way you'd send one to a friend.</p>
+      </div>
+
+      <div class="steps rise">
+        <div class="step">
+          <span class="n">STEP 1</span>
+          <h3>Decide what nothing is worth</h3>
+          <p>Any amount. There is no minimum and no ceiling. The ledger ranks by what it was worth in dollars at the moment you're reading it.</p>
+        </div>
+        <div class="step">
+          <span class="n">STEP 2</span>
+          <h3>Write your inscription</h3>
+          <p>Type a line below. Copy the encoded version into your wallet's data field. It rides along inside the transaction. Nothing is stored here.</p>
+        </div>
+        <div class="step">
+          <span class="n">STEP 3</span>
+          <h3>Send it, then wait</h3>
+          <p>Send to the matching address. Once the block confirms, this window reads your line straight off the chain and puts you in the ledger.</p>
+        </div>
+      </div>
+
+      <div class="composer rise">
+        <div class="lab">
+          <p class="eyebrow">Your inscription</p>
+          <p class="hint" style="font-size:11px;color:var(--text-faint)">Written by you, into the chain. Public and permanent.</p>
+        </div>
+        <label for="msg" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your inscription</label>
+        <textarea id="msg" placeholder="I bought nothing and I feel lighter already." maxlength="300" spellcheck="true"></textarea>
+        <div class="counts">
+          <span id="cChars">0 characters</span>
+          <span id="cBytes">0 bytes</span>
+          <span id="cBtc">Bitcoin OP_RETURN limit: 80 bytes</span>
+        </div>
+
+        <div class="outs">
+          <div class="out">
+            <div class="oh">
+              <span class="chain">Ethereum · Base · Arbitrum</span>
+              <button class="btn" type="button" data-copy="outEvm">Copy hex</button>
+            </div>
+            <code id="outEvm">0x</code>
+            <p class="hint">In MetaMask or Rabby: start the send, open <em>Hex data</em> (Advanced settings → “Show hex data”), paste this in. Rabby calls it <em>Input data</em>.</p>
+          </div>
+          <div class="out">
+            <div class="oh">
+              <span class="chain">Solana</span>
+              <button class="btn" type="button" data-copy="outSol">Copy memo</button>
+            </div>
+            <code id="outSol"></code>
+            <p class="hint">Paste into the <em>Memo</em> field when sending. Solflare and most exchanges expose one; with the CLI, add <code style="display:inline;padding:0;background:none">--with-memo</code>.</p>
+          </div>
+          <div class="out">
+            <div class="oh">
+              <span class="chain">Bitcoin</span>
+              <button class="btn" type="button" data-copy="outBtc">Copy text</button>
+            </div>
+            <code id="outBtc"></code>
+            <p class="hint">Needs a wallet that writes <em>OP_RETURN</em>. Sparrow (Add output → OP_RETURN) or Electrum's console. Max 80 bytes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="plates rise">
+        <div class="plate">
+          <div class="pn">
+            <span class="net">EVM</span>
+            <span class="on">Ethereum · Base<br>Arbitrum</span>
+          </div>
+          <div class="addr" id="addrEvm">0x5B3EDA91c4D2989F6e256095fF27230196149E57</div>
+          <button class="btn" type="button" data-copy="addrEvm">Copy address</button>
+        </div>
+        <div class="plate">
+          <div class="pn">
+            <span class="net">BTC</span>
+            <span class="on">Native segwit<br>bech32</span>
+          </div>
+          <div class="addr" id="addrBtc">bc1qqtaknajcrkn0tw2asvtyc2zeeusu6fvjprrdr0</div>
+          <button class="btn" type="button" data-copy="addrBtc">Copy address</button>
+        </div>
+        <div class="plate">
+          <div class="pn">
+            <span class="net">SOL</span>
+            <span class="on">Solana<br>mainnet-beta</span>
+          </div>
+          <div class="addr" id="addrSol">8oVrfDSLrrMpqYANvAwYekn2HCppA2HHS9j8mPfM8mgD</div>
+          <button class="btn" type="button" data-copy="addrSol">Copy address</button>
+        </div>
+      </div>
+
+      <div class="plainer rise">
+        <strong>Plainly, with no poetry:</strong> you will receive nothing. There is no good, no service, no token, no refund and no promise of one, only a line of your own writing on a public ledger, and a place in a list. Money sent to these addresses is gone, the way money sent to any stranger is gone. Your inscription is put on-chain by you, not by us; we only read it back, and anyone with the address can read it too. Send an amount you would be content to have simply given away.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ THE LEDGER ══════════ -->
+  <section id="ledger" class="sec band">
+    <div class="wrap">
+      <div class="head rise">
+        <h2>The Ledger of Nothing</h2>
+        <p>Everyone who has paid for nothing, ranked by how much nothing they took. Read live from five chains, in your browser.</p>
+      </div>
+
+      <div class="crt rise">
+        <div class="bar">
+          <span class="live"><i class="dot" id="statusDot"></i><span id="statusText">Reading the chains…</span></span>
+          <button class="btn" type="button" id="refresh">Read again</button>
+        </div>
+        <div id="ledgerBody">
+          <div class="empty">
+            <p>Listening.</p>
+            <span>Five chains, three addresses.</span>
+          </div>
+        </div>
+        <div class="chainpills" id="pills"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="sig"><span>Designed by</span>BENEVOLENT</div>
+      <p class="fnote">AIR is a shop with no inventory, no company behind it and nothing to deliver. Nothing here is an offer of investment or a financial product. Prices shown are indicative and fetched live. Look after yourselves, and open a window.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+'use strict';
+
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============================================================
+   1. THE VIEW: a stippled airbrush night, drawn every frame
+   ============================================================ */
+const cv = document.getElementById('sky');
+const cx = cv.getContext('2d', { alpha:false });
+let W=0, H=0, DPR=1, stars=[], lights=[], noiseTile=null, lastHy=-999;
+const off = document.createElement('canvas');
+const ox = off.getContext('2d');
+
+/* deterministic randomness so the sky is the same on every reload */
+let _s = 0x2F6E2B1;
+const rnd = () => (_s = (_s*1664525 + 1013904223) >>> 0) / 4294967296;
+
+function horizon(p){ return H * (0.635 - p*0.085); }
+
+function build(){
+  DPR = Math.min(devicePixelRatio || 1, 2);
+  W = Math.max(1, innerWidth); H = Math.max(1, innerHeight);
+  cv.width = Math.floor(W*DPR); cv.height = Math.floor(H*DPR);
+  cv.style.width = W+'px'; cv.style.height = H+'px';
+  cx.setTransform(DPR,0,0,DPR,0,0);
+
+  off.width = Math.max(2, Math.floor(W/2)); off.height = Math.max(2, Math.floor(H/2));
+
+  _s = 0x2F6E2B1;
+  const hy = horizon(0);
+
+  /* stars thin out toward the horizon, exactly as they do in the paintings */
+  stars = [];
+  const nStars = Math.round(W*H/5200);
+  for(let i=0;i<nStars;i++){
+    const y = Math.pow(rnd(), 1.55) * hy;
+    stars.push({
+      x: rnd()*W, y,
+      r: rnd() < .9 ? .6 : 1.15,
+      a: .22 + rnd()*.72 * (1 - y/hy*.6),
+      tw: rnd()*Math.PI*2,
+      tint: rnd() < .18
+    });
+  }
+
+  /* the city below: rows of sodium lights, compressing with distance */
+  lights = [];
+  const rows = 46;
+  for(let r=0;r<rows;r++){
+    const t = r/rows;                        // 0 at horizon, 1 at bottom
+    const y = hy + Math.pow(t, 2.15) * (H - hy) * 1.35;
+    if (y > H*1.25) break;
+    const density = 0.020 + t*0.052;
+    const n = Math.round(W * density);
+    for(let i=0;i<n;i++){
+      lights.push({
+        x: rnd()*W, y: y + (rnd()-.5)*3,
+        s: .7 + t*1.9,
+        a: (.30 + rnd()*.62) * (1 - t*.45),
+        tw: rnd()*Math.PI*2,
+        c: rnd() < .12 ? 1 : (rnd() < .22 ? 2 : 0)   // 0 sodium · 1 blue · 2 ember
+      });
+    }
+  }
+  lastHy = -999;
+  paintSky(scrollP());
+  draw(performance.now());     // paint at once; do not wait for a frame
+}
+
+/* the stippled gradient wash, rebuilt only when the horizon actually moves */
+function paintSky(p){
+  const hy = horizon(p);
+  if (!isFinite(hy) || H < 2 || W < 2) return;
+  if (Math.abs(hy - lastHy) < 2) return;
+  lastHy = hy;
+
+  const w = off.width, h = off.height;
+  const f = hy / H;
+  const g = ox.createLinearGradient(0,0,0,h);
+  const stop = (v,c) => g.addColorStop(Math.max(0, Math.min(1, v)), c);
+  stop(0,           '#02040A');
+  stop(f*0.42,      '#061029');
+  stop(f*0.74,      '#123C7C');
+  stop(f*0.93,      '#3A4E7E');
+  stop(f*0.985,     '#8E3A22');
+  stop(f,           '#D8531F');
+  stop(f+0.012,     '#3A140F');
+  stop(Math.min(1,f+0.10), '#140A10');
+  stop(1,           '#07050C');
+  ox.fillStyle = g; ox.fillRect(0,0,w,h);
+
+  /* per-pixel grain: the airbrush stipple that holds the whole look together */
+  const img = ox.getImageData(0,0,w,h);
+  const d = img.data;
+  for(let i=0;i<d.length;i+=4){
+    const n = (Math.random()*30 - 15);
+    d[i]   = d[i]   + n < 0 ? 0 : (d[i]   + n > 255 ? 255 : d[i]   + n);
+    d[i+1] = d[i+1] + n < 0 ? 0 : (d[i+1] + n > 255 ? 255 : d[i+1] + n);
+    d[i+2] = d[i+2] + n < 0 ? 0 : (d[i+2] + n > 255 ? 255 : d[i+2] + n);
+  }
+  ox.putImageData(img,0,0);
+  noiseTile = true;
+}
+
+function scrollP(){
+  const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  return Math.max(0, Math.min(1, scrollY / max));
+}
+
+function draw(t){
+  if (W < 2 || H < 2) return;
+  const p = scrollP();
+  paintSky(p);
+  const hy = horizon(p);
+
+  cx.drawImage(off, 0, 0, W, H);
+
+  /* stars */
+  for(const s of stars){
+    if (s.y > hy) continue;
+    const a = RM ? s.a : s.a * (0.72 + 0.28*Math.sin(t/1400 + s.tw));
+    cx.fillStyle = s.tint ? `rgba(176,206,255,${a})` : `rgba(238,242,255,${a})`;
+    cx.fillRect(s.x, s.y, s.r, s.r);
+  }
+
+  /* the sun: rises out of the city as you go down the page */
+  const sunY = hy + H*0.085 - p * H*0.72;
+  const sunR = Math.max(10, W*0.021);
+  const gl = cx.createRadialGradient(W*0.78, sunY, 0, W*0.78, sunY, sunR*9);
+  gl.addColorStop(0,'rgba(255,110,60,.5)');
+  gl.addColorStop(.22,'rgba(228,68,28,.16)');
+  gl.addColorStop(1,'rgba(228,68,28,0)');
+  cx.fillStyle = gl; cx.beginPath(); cx.arc(W*0.78, sunY, sunR*9, 0, 7); cx.fill();
+  cx.fillStyle = '#F2542A';
+  cx.beginPath(); cx.arc(W*0.78, sunY, sunR, 0, 7); cx.fill();
+
+  /* the warm band sitting on the horizon */
+  const band = cx.createLinearGradient(0, hy-H*0.05, 0, hy+H*0.02);
+  band.addColorStop(0,'rgba(216,83,31,0)');
+  band.addColorStop(.72,'rgba(226,96,36,.30)');
+  band.addColorStop(1,'rgba(255,150,90,.55)');
+  cx.fillStyle = band; cx.fillRect(0, hy-H*0.05, W, H*0.07);
+
+  /* the ground, which hides the sun when it is down */
+  cx.fillStyle = 'rgba(8,5,12,.55)';
+  cx.fillRect(0, hy, W, H-hy);
+
+  /* city lights */
+  for(const L of lights){
+    const a = RM ? L.a : L.a * (0.68 + 0.32*Math.sin(t/900 + L.tw));
+    cx.fillStyle = L.c === 1 ? `rgba(120,178,255,${a*.8})`
+                 : L.c === 2 ? `rgba(255,96,44,${a})`
+                 : `rgba(255,183,122,${a})`;
+    cx.fillRect(L.x, L.y, L.s, L.s*0.72);
+  }
+
+  /* the glow the city throws back up into the haze */
+  const haze = cx.createLinearGradient(0, hy, 0, hy + H*0.30);
+  haze.addColorStop(0,'rgba(255,150,80,.13)');
+  haze.addColorStop(1,'rgba(255,150,80,0)');
+  cx.fillStyle = haze; cx.fillRect(0, hy, W, H*0.30);
+}
+
+let raf = 0;
+function loop(t){ draw(t); raf = requestAnimationFrame(loop); }
+
+build();
+if (RM) addEventListener('scroll', () => draw(0), {passive:true});
+else raf = requestAnimationFrame(loop);
+
+let rt;
+addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 180); });
+
+/* mullions belong to the window, not to the reading */
+const room = document.getElementById('room');
+addEventListener('scroll', () => {
+  room.classList.toggle('past', scrollY > innerHeight*0.45);
+}, {passive:true});
+
+
+/* ============================================================
+   2. SMALL LIVING THINGS: breath, tally, reveals, copying
+   ============================================================ */
+const CYCLE = 11000, IN = 4400;
+const label = document.getElementById('breathLabel');
+const tally = document.getElementById('tally');
+const t0 = Date.now();
+setInterval(() => {
+  const e = Date.now() - t0;
+  label.textContent = (e % CYCLE) < IN ? 'breathe in' : 'and out';
+  tally.textContent = Math.floor(e / 4200).toLocaleString();
+}, 400);
+
+const io = new IntersectionObserver((es) => {
+  for(const e of es) if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rise').forEach(el => io.observe(el));
+
+document.addEventListener('click', async (ev) => {
+  const b = ev.target.closest('[data-copy]');
+  if(!b) return;
+  const src = document.getElementById(b.dataset.copy);
+  const txt = (src.textContent || '').trim();
+  if(!txt || txt === '0x'){ return; }
+  try{ await navigator.clipboard.writeText(txt); }
+  catch{
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); } finally { ta.remove(); }
+  }
+  const was = b.textContent;
+  b.textContent = 'Copied'; b.classList.add('done');
+  setTimeout(() => { b.textContent = was; b.classList.remove('done'); }, 1600);
+});
+
+
+/* ============================================================
+   3. THE INSCRIPTION COMPOSER: plain text in, chain data out
+   ============================================================ */
+const enc = new TextEncoder();
+const msg = document.getElementById('msg');
+const outEvm = document.getElementById('outEvm');
+const outSol = document.getElementById('outSol');
+const outBtc = document.getElementById('outBtc');
+const cChars = document.getElementById('cChars');
+const cBytes = document.getElementById('cBytes');
+const cBtc = document.getElementById('cBtc');
+
+function compose(){
+  const v = msg.value;
+  const bytes = enc.encode(v);
+  outEvm.textContent = '0x' + Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('');
+  outSol.textContent = v;
+  /* trim to 80 whole bytes without splitting a character in half */
+  let btc = v, cut = bytes.length > 80;
+  while(enc.encode(btc).length > 80) btc = btc.slice(0, -1);
+  outBtc.textContent = btc;
+  cChars.textContent = v.length + (v.length === 1 ? ' character' : ' characters');
+  cBytes.textContent = bytes.length + ' bytes';
+  cBtc.textContent = cut ? `Bitcoin trims this to ${enc.encode(btc).length} bytes` : 'Bitcoin OP_RETURN limit: 80 bytes';
+  cBtc.className = cut ? 'over' : '';
+}
+msg.addEventListener('input', compose);
+compose();
+
+
+/* ============================================================
+   4. THE LEDGER: read five chains straight from the browser
+   ============================================================ */
+const ADDR = {
+  evm: '0x5B3EDA91c4D2989F6e256095fF27230196149E57',
+  btc: 'bc1qqtaknajcrkn0tw2asvtyc2zeeusu6fvjprrdr0',
+  sol: '8oVrfDSLrrMpqYANvAwYekn2HCppA2HHS9j8mPfM8mgD'
+};
+const EVM_CHAINS = [
+  { key:'ethereum', name:'Ethereum', api:'https://eth.blockscout.com',      ex:'https://etherscan.io/tx/' },
+  { key:'base',     name:'Base',     api:'https://base.blockscout.com',     ex:'https://basescan.org/tx/' },
+  { key:'arbitrum', name:'Arbitrum', api:'https://arbitrum.blockscout.com', ex:'https://arbiscan.io/tx/' }
+];
+const SOL_RPC = ['https://solana-rpc.publicnode.com','https://api.mainnet-beta.solana.com'];
+const FALLBACK_PRICE = { ETH:2500, BTC:78000, SOL:95 };
+
+const body   = document.getElementById('ledgerBody');
+const pills  = document.getElementById('pills');
+const sDot   = document.getElementById('statusDot');
+const sText  = document.getElementById('statusText');
+const refreshBtn = document.getElementById('refresh');
+
+const dec = new TextDecoder('utf-8', { fatal:true });
+function hexToText(hex){
+  if(!hex) return '';
+  let h = hex.startsWith('0x') ? hex.slice(2) : hex;
+  if(h.length < 2 || h.length % 2) return '';
+  const b = new Uint8Array(h.length/2);
+  for(let i=0;i<b.length;i++){
+    const v = parseInt(h.substr(i*2,2),16);
+    if(Number.isNaN(v)) return '';
+    b[i] = v;
+  }
+  let s;
+  try{ s = dec.decode(b); } catch { return ''; }
+  return clean(s);
+}
+/* strip control characters, collapse whitespace, cap the length.
+   never inserted as HTML, always via textContent. */
+function clean(s){
+  let out = "";
+  for(const ch of String(s)){
+    const c = ch.codePointAt(0);
+    if(c < 32 || (c >= 127 && c <= 159)){ out += " "; continue; }      // C0 / C1 controls
+    if(c === 0x2028 || c === 0x2029){ out += " "; continue; }          // line / paragraph separators
+    if(c >= 0x200B && c <= 0x200F) continue;                           // zero-width + bidi marks
+    if(c >= 0x202A && c <= 0x202E) continue;                           // bidi overrides
+    if(c >= 0x2060 && c <= 0x206F) continue;                           // invisible formatting
+    if(c === 0xFEFF) continue;                                         // byte order mark
+    out += ch;
+  }
+  out = out.replace(/\s+/g, " ").trim();
+  return out.length > 240 ? out.slice(0, 240) + "…" : out;
+}
+const short = a => a ? a.slice(0,6) + '…' + a.slice(-4) : 'unknown';
+function ago(sec){
+  if(!sec) return 'pending';
+  const d = Date.now()/1000 - sec;
+  if(d < 90) return 'just now';
+  if(d < 5400) return Math.round(d/60) + 'm ago';
+  if(d < 172800) return Math.round(d/3600) + 'h ago';
+  return Math.round(d/86400) + 'd ago';
+}
+function money(n){
+  if(n >= 1000) return '$' + Math.round(n).toLocaleString();
+  if(n >= 1) return '$' + n.toFixed(2);
+  return '$' + n.toFixed(4);
+}
+function nat(n, sym){
+  const s = n >= 1 ? n.toFixed(4) : n.toPrecision(3);
+  return String(parseFloat(s)) + ' ' + sym;
+}
+const withTimeout = (p, ms=12000) => Promise.race([
+  p, new Promise((_,rj) => setTimeout(() => rj(new Error('timeout')), ms))
+]);
+async function getJSON(url, opts){
+  const r = await withTimeout(fetch(url, opts));
+  if(!r.ok) throw new Error(r.status + '');
+  return r.json();
+}
+
+/* ---- prices ---- */
+async function prices(){
+  try{
+    const d = await getJSON('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,bitcoin,solana&vs_currencies=usd');
+    const p = { ETH:d.ethereum?.usd, BTC:d.bitcoin?.usd, SOL:d.solana?.usd };
+    if(p.ETH && p.BTC && p.SOL) return { p, live:true };
+  }catch{}
+  try{
+    const [e,b,s] = await Promise.all(['ETH','BTC','SOL'].map(
+      k => getJSON(`https://api.coinbase.com/v2/prices/${k}-USD/spot`)));
+    const p = { ETH:+e.data.amount, BTC:+b.data.amount, SOL:+s.data.amount };
+    if(p.ETH && p.BTC && p.SOL) return { p, live:true };
+  }catch{}
+  return { p: FALLBACK_PRICE, live:false };
+}
+
+/* ---- EVM ---- */
+async function readEvm(chain){
+  const url = `${chain.api}/api?module=account&action=txlist&address=${ADDR.evm}&sort=desc&page=1&offset=60`;
+  const d = await getJSON(url);
+  if(d.status !== '1' || !Array.isArray(d.result)) return [];
+  const me = ADDR.evm.toLowerCase();
+  return d.result
+    .filter(t => (t.to||'').toLowerCase() === me
+              && t.isError !== '1' && t.txreceipt_status !== '0'
+              && BigInt(t.value || '0') > 0n)
+    .map(t => ({
+      msg: hexToText(t.input),
+      amount: Number(BigInt(t.value)) / 1e18,
+      sym: 'ETH', chain: chain.name,
+      from: t.from, time: +t.timeStamp || 0,
+      url: chain.ex + t.hash, pending:false
+    }));
+}
+
+/* ---- Bitcoin ---- */
+async function readBtc(){
+  let txs = null;
+  for(const base of ['https://blockstream.info/api','https://mempool.space/api']){
+    try{ txs = await getJSON(`${base}/address/${ADDR.btc}/txs`); break; }catch{}
+  }
+  if(!Array.isArray(txs)) throw new Error('unreachable');
+  const out = [];
+  for(const t of txs){
+    let sats = 0, note = '';
+    for(const v of (t.vout||[])){
+      if(v.scriptpubkey_address === ADDR.btc) sats += v.value || 0;
+      if(v.scriptpubkey_type === 'op_return' && !note){
+        const parts = (v.scriptpubkey_asm||'').split(' ');
+        const hex = parts[parts.length-1];
+        if(hex && /^[0-9a-fA-F]+$/.test(hex)) note = hexToText(hex);
+      }
+    }
+    if(sats <= 0) continue;
+    /* a transaction that spends our own coins is change coming home, not a purchase */
+    const self = (t.vin||[]).some(v => v.prevout?.scriptpubkey_address === ADDR.btc);
+    if(self) continue;
+    out.push({
+      msg: note, amount: sats/1e8, sym:'BTC', chain:'Bitcoin',
+      from: t.vin?.[0]?.prevout?.scriptpubkey_address || '',
+      time: t.status?.block_time || 0,
+      url: 'https://mempool.space/tx/' + t.txid,
+      pending: !t.status?.confirmed
+    });
+  }
+  return out;
+}
+
+/* ---- Solana ---- */
+async function rpc(body){
+  let last;
+  for(const ep of SOL_RPC){
+    try{
+      return await getJSON(ep, {
+        method:'POST', headers:{'content-type':'application/json'},
+        body: JSON.stringify(body)
+      });
+    }catch(e){ last = e; }
+  }
+  throw last || new Error('unreachable');
+}
+async function readSol(){
+  const sigs = await rpc({ jsonrpc:'2.0', id:1, method:'getSignaturesForAddress',
+    params:[ADDR.sol, { limit:25 }] });
+  const list = (sigs.result || []).filter(s => !s.err);
+  if(!list.length) return [];
+
+  const batch = list.map((s,i) => ({
+    jsonrpc:'2.0', id:i, method:'getTransaction',
+    params:[s.signature, { encoding:'jsonParsed', maxSupportedTransactionVersion:0 }]
+  }));
+  let txs;
+  try{
+    const r = await rpc(batch);
+    txs = Array.isArray(r) ? r : [r];
+  }catch{ return []; }
+
+  const byId = new Map(txs.filter(x => x && x.result).map(x => [x.id, x.result]));
+  const out = [];
+  list.forEach((s,i) => {
+    const tx = byId.get(i);
+    if(!tx || !tx.meta) return;
+    const keys = (tx.transaction?.message?.accountKeys || [])
+      .map(k => typeof k === 'string' ? k : k.pubkey);
+    const idx = keys.indexOf(ADDR.sol);
+    if(idx < 0) return;
+    const delta = (tx.meta.postBalances[idx] - tx.meta.preBalances[idx]) / 1e9;
+    if(delta <= 0) return;
+    /* getSignaturesForAddress returns memos as "[len] text" */
+    const memo = s.memo ? clean(String(s.memo).replace(/^\[\d+\]\s*/,'')) : '';
+    out.push({
+      msg: memo, amount: delta, sym:'SOL', chain:'Solana',
+      from: keys[0] || '', time: s.blockTime || tx.blockTime || 0,
+      url: 'https://solscan.io/tx/' + s.signature, pending:false
+    });
+  });
+  return out;
+}
+
+/* ---- render ---- */
+function el(tag, cls, text){
+  const n = document.createElement(tag);
+  if(cls) n.className = cls;
+  if(text != null) n.textContent = text;   /* textContent, always */
+  return n;
+}
+
+function render(rows, priceLive){
+  body.replaceChildren();
+  if(!rows.length){
+    const e = el('div','empty');
+    e.append(
+      el('p', null, 'Nobody has bought nothing yet.'),
+      el('span', null, 'The ledger is open. The first line written here stays at the top until someone outspends it.')
+    );
+    body.append(e);
+    return;
+  }
+
+  const [top, ...rest] = rows;
+
+  const champ = el('div','champ');
+  champ.append(el('p','cap','The largest nothing'));
+  const q = el('blockquote', null, top.msg || 'No inscription. Just the money, and the silence.');
+  if(!top.msg) q.style.color = 'var(--text-faint)';
+  champ.append(q);
+  const meta = el('div','meta');
+  const cell = (t,v,cls) => { const d = el('div', cls); d.append(el('b',null,t), document.createTextNode(v)); return d; };
+  meta.append(
+    cell('Paid', `${nat(top.amount, top.sym)} · ${money(top.usd)}`, 'amt'),
+    cell('Chain', top.chain),
+    cell('From', short(top.from)),
+    cell('When', ago(top.time))
+  );
+  const link = el('div');
+  link.append(el('b',null,'Proof'));
+  const a = el('a', null, 'view transaction');
+  a.href = top.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+  a.style.color = 'var(--sodium)';
+  link.append(a);
+  meta.append(link);
+  champ.append(meta);
+  body.append(champ);
+
+  const wrap = el('div','rows');
+  rest.forEach((r,i) => {
+    const row = el('div','row');
+    row.append(el('div','rk', String(i+2).padStart(2,'0')));
+    const m = el('div', r.msg ? 'msg' : 'msg none', r.msg || 'no inscription');
+    if(r.pending) m.append(el('span','tag','settling'));
+    row.append(m);
+    const v = el('div','val', nat(r.amount, r.sym));
+    v.append(el('small', null, money(r.usd)));
+    row.append(v);
+    const w = el('div','whence');
+    const wa = el('a', null, r.chain);
+    wa.href = r.url; wa.target = '_blank'; wa.rel = 'noopener noreferrer';
+    w.append(wa, document.createElement('br'), document.createTextNode(ago(r.time)));
+    row.append(w);
+    wrap.append(row);
+  });
+  body.append(wrap);
+
+  if(!priceLive){
+    const n = el('div','chainpills');
+    n.append(el('span','pill','dollar values are indicative; the price feed did not answer'));
+    body.append(n);
+  }
+}
+
+let busy = false;
+async function readEverything(){
+  if(busy) return;
+  busy = true;
+  refreshBtn.disabled = true;
+  sDot.classList.remove('warn');
+  sText.textContent = 'Reading the chains…';
+
+  const jobs = [
+    ...EVM_CHAINS.map(c => ({ name:c.name, run:() => readEvm(c) })),
+    { name:'Bitcoin', run:readBtc },
+    { name:'Solana',  run:readSol }
+  ];
+
+  const [{p, live}, ...settled] = await Promise.all([
+    prices(),
+    ...jobs.map(j => j.run().then(v => ({ok:true, v})).catch(e => ({ok:false, e})))
+  ]);
+
+  pills.replaceChildren();
+  let rows = [], good = 0;
+  settled.forEach((s,i) => {
+    const pill = el('span', 'pill ' + (s.ok ? 'ok' : 'bad'),
+      jobs[i].name + (s.ok ? ' · ' + s.v.length : ' · no answer'));
+    pills.append(pill);
+    if(s.ok){ good++; rows = rows.concat(s.v); }
+  });
+
+  const price = { ETH:p.ETH, BTC:p.BTC, SOL:p.SOL };
+  rows.forEach(r => { r.usd = r.amount * (price[r.sym] || 0); });
+  rows.sort((a,b) => b.usd - a.usd || b.time - a.time);
+  rows = rows.slice(0, 60);
+
+  render(rows, live);
+
+  if(good === 0){
+    sDot.classList.add('warn');
+    sText.textContent = 'No chain answered. Try again in a moment.';
+  }else{
+    const n = rows.length;
+    sText.textContent = n
+      ? `${n} ${n===1?'purchase':'purchases'} of nothing · read ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`
+      : `Nothing bought yet · read ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;
+  }
+  refreshBtn.disabled = false;
+  busy = false;
+}
+
+refreshBtn.addEventListener('click', readEverything);
+
+/* read straight away, then keep it warm while the tab is being watched */
+readEverything();
+setInterval(() => { if(!document.hidden) readEverything(); }, 120000);
+
+})();
+</script>
+</body>
+</html>

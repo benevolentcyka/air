@@ -1,0 +1,7 @@
+.vercel/
+node_modules/
+# never commit key material
+*KEYS*
+*.key
+*secret*
+PRIVATE-*

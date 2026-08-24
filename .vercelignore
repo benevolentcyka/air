@@ -1,0 +1,9 @@
+# never publish anything but the site itself
+*.txt
+*KEYS*
+*key*
+*secret*
+.claude/
+README.md
+node_modules/
+.vercel
